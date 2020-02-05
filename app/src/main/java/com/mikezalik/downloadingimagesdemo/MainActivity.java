@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         ImageDownloader task = new ImageDownloader();
         Bitmap myImage;
         try {
-            myImage = task.execute("https://www.google.com/url?sa=i&url=https%3A%2F%2Fgenerations-starwars.com%2F2019%2F11%2F15%2Fdisney-releases-baby-yoda-plush-from-mandalorian-or-baby-yoda-toy-buy-now-available-for-pre-order%2F&psig=AOvVaw13V34N9sfccnP2xRTQEirn&ust=1580952631442000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjC0tOhuecCFQAAAAAdAAAAABAD").get();
+            myImage = task.execute("https://www.tvinsider.com/wp-content/uploads/2019/12/the-mandalorian-baby-yoda-1014x570.jpeg").get();
             imageView.setImageBitmap(myImage);
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
               InputStream in = connection.getInputStream();
 
-                return BitmapFactory.decodeStream(in);
+                Bitmap myBitmap = BitmapFactory.decodeStream(in);
+                return myBitmap;
 
             } catch (Exception e) {
               e.printStackTrace();
