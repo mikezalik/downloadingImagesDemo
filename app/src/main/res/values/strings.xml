@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Downloading Images Demo</string>
     <string name="downloadimage">downloadImage</string>
+    <string name="downloaded_image">Downloaded Image</string>
 </resources>
